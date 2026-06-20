@@ -1,0 +1,26 @@
+Coding Question 1: Student Performance Analyzer
+Problem Statement:
+A faculty member wants to analyze student performance after a JavaScript mid-term evaluation. You are
+required to build a console-based ES6 program that processes student records using array methods.
+Given Data:
+const students = [
+{ id: 1, name: 'Aman', marks: 85, attendance: 92 },
+{ id: 2, name: 'Riya', marks: 38, attendance: 76 },
+{ id: 3, name: 'Karan', marks: 67, attendance: 81 },
+{ id: 4, name: 'Simran', marks: 91, attendance: 88 },
+{ id: 5, name: 'Raj', marks: 45, attendance: 60 },
+{ id: 6, name: 'Neha', marks: 29, attendance: 95 }
+];
+Tasks to Perform:
+1. Use filter() to create a list of students who have passed. Passing marks are 40 or above.
+2. Use map() to generate a new array containing each student's name, marks, attendance, and grade.
+3. Grade rules: marks >= 80: A, marks >= 60: B, marks >= 40: C, otherwise: F.
+4. Use reduce() to calculate the class average marks.
+5. Use reduce() to find the topper of the class.
+6. Display the final results using template literals in a neat format.
+7. Use let, const, arrow functions, destructuring, and meaningful variable names.
+Expected Output Requirements:
+- List of passed students.
+- Student report with calculated grades.
+- Class average marks.
+- Topper's name and marks.
