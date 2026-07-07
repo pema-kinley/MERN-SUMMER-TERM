@@ -1,10 +1,11 @@
 import styles from "./Hero.module.css";
+import heroImage from "./assets/hero.png";
 
 function Hero() {
     return (
         <section className={styles.hero}>
-            <div>
-                <p>handcrafted Keepsakes</p>
+            <div className={styles.content}>
+                <p>Handcrafted Keepsakes</p>
 
                 <h1>
                     Carry What Matters Most
@@ -14,14 +15,14 @@ function Hero() {
                     Transform your memories, passions, and imagination into handcrafted keepsakes made uniquely for you.
                 </p>
 
-                <div>
-                    <button>Create Yours</button>
-                    <button>Explore Creations</button>
+                <div className={styles.actions}>
+                    <button className={styles.primaryButton}>Create Yours</button>
+                    <button className={styles.secondaryButton}>Explore Creations</button>
                 </div>
             </div>
 
-            <div className={styles.content}>
-                <h2>image Coming Soon</h2>
+            <div className={styles.image}>
+                <img src={heroImage} alt ="Handcrafted memory keychain" />
             </div>
         </section>
     );
