@@ -1,8 +1,8 @@
-import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductCard from "../../../components/ProductCard/ProductCard";
 import styles from "./FeatureCreation.module.css";
-import amber from "../../assets/images/products/amber.webp";
-import little_dog from "../../assets/images/products/little-dog.webp";
-import little_cat from "../../assets/images/products/little-cat.webp";
+import amber from "../../../assets/images/products/amber.webp";
+import little_dog from "../../../assets/images/products/little-dog.webp";
+import little_cat from "../../../assets/images/products/little-cat.webp";
 
 
 function FeaturedCreations() {
