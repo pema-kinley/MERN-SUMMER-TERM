@@ -1,7 +1,8 @@
 // Customerstories.jsx
 import TestimonialCard from "../../../components/TestimonialCard/TestimonialCard";
-import styles from "./Customerstories.module.css";
+import styles from "./CustomerStories.module.css";
 
+function CustomerStories() {
 const storiesData = [
   {
     id: 1,
@@ -28,8 +29,6 @@ const storiesData = [
     location: "Paro, Bhutan"
   }
 ];
-
-export default function CustomerStories() {
   return (
     <section className={styles.container}>
       <p className={styles.eyebrow}>Reviews from the keyring</p>
@@ -49,3 +48,5 @@ export default function CustomerStories() {
     </section>
   );
 }
+
+export default CustomerStories;

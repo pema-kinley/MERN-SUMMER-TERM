@@ -1,0 +1,76 @@
+/* StepCards.module.css */
+
+:root {
+  --paper: #fcf9f2;
+  --paper-edge: #e3d6ba;
+  --ink: #2a2118;
+  --ink-soft: #6b5a44;
+  --brass: #8c5a1f;
+  --brass-soft: #b9873f;
+}
+
+.stepCard {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--paper-edge);
+  border-radius: 16px;
+  padding: 3rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(42, 33, 24, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px rgba(140, 90, 31, 0.14);
+}
+
+/* The brass seal — sits half on the thread, half on the card */
+.stepNumber {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px dashed var(--brass-soft);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--brass);
+  transition: background 0.3s ease, color 0.3s ease, border-style 0.3s ease;
+}
+
+.stepCard:hover .stepNumber {
+  background: var(--brass);
+  border-style: solid;
+  color: var(--paper);
+}
+
+.stepCard h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.6rem 0;
+}
+
+.stepCard p {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  max-width: 24ch;
+  margin: 0;
+}
