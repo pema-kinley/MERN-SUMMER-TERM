@@ -1,0 +1,92 @@
+/* HowItWorks.module.css */
+
+:root {
+  --paper: #fcf9f2;
+  --paper-edge: #e3d6ba;
+  --ink: #2a2118;
+  --ink-soft: #7c6b54;
+  --brass: #a56a2a;
+  --brass-soft: #c99a5b;
+}
+
+.howItWorks {
+  background-color: rgb(254, 255, 253);
+  padding: 6rem 2rem;
+}
+
+.eyebrow {
+  display: block;
+  text-align: center;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin: 0 0 0.75rem 0;
+}
+
+.howItWorks h2 {
+  font-family: "Fraunces", Georgia, serif;
+  text-align: center;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 1rem 0;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--ink-soft);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1rem;
+  max-width: 40ch;
+  margin: 0 auto 4.5rem auto;
+  line-height: 1.6;
+}
+
+.stepsWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 32px; /* room for the circles to sit half above the cards */
+}
+
+/* The stitched thread connecting each step — desktop only */
+.stepsWrapper::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 8%;
+  right: 8%;
+  height: 0;
+  border-top: 2px dashed var(--paper-edge);
+  z-index: 0;
+}
+
+.steps {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .stepsWrapper::before {
+    display: none;
+  }
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .howItWorks {
+    padding: 4rem 1.25rem;
+  }
+}

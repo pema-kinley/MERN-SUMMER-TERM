@@ -1,0 +1,79 @@
+/* WhyChooseUs.module.css — change only the :root block and the .whyChooseUs rule */
+
+:root {
+  --paper: #fcf9f2;
+  --paper-edge: #e3d6ba;
+  --ink: #2a2118;
+  --ink-soft: #6b5a44;
+  --brass: #8c5a1f;
+  --brass-soft: #b9873f;
+}
+
+.whyChooseUs {
+  background-color: #f7eee3;
+  background-size: 20px 20px;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: block;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin: 0 0 0.75rem 0;
+}
+
+.whyChooseUs h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  color: var(--ink);
+  max-width: 22ch;
+  margin: 0 auto 1rem auto;
+}
+
+.subtitle {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  max-width: 34ch;
+  margin: 0 auto 4rem auto;
+  line-height: 1.6;
+}
+
+/* Vertical strand — cards alternate left/right down a center spine */
+.grid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.grid::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 50%;
+  border-left: 4px solid var(--paper-edge);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+@media (max-width: 720px) {
+  .grid::before {
+    left: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .whyChooseUs {
+    padding: 4rem 1.25rem;
+  }
+}

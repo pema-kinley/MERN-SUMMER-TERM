@@ -1,0 +1,128 @@
+/* CTASection.module.css */
+
+.cta {
+  background-color: #f7eee3;
+  background-image: radial-gradient(circle, rgba(252, 249, 242, 0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+  padding: 3.5rem 1.5rem;   /* was 6rem 1.5rem */
+  display: flex;
+  justify-content: center;
+}
+
+.tag {
+  position: relative;
+  background-color: #fcf9f2;
+  border: 1px solid #b9873f;
+  border-radius: 18px;
+  padding: 2rem 3rem 1.75rem;   /* was 3.5rem 3rem 3rem */
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  transform: rotate(-1.5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.ring {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e6a65d;
+  border-radius: 50%;
+  background-color: hsl(30, 69%, 81%);
+  transform-origin: top center;
+  animation: none;
+}
+
+.tag:hover .ring {
+  animation: jingle 0.6s ease-in-out;
+}
+
+@keyframes jingle {
+  0%   { transform: translateX(-50%) rotate(0deg); }
+  25%  { transform: translateX(-50%) rotate(-8deg); }
+  50%  { transform: translateX(-50%) rotate(7deg); }
+  75%  { transform: translateX(-50%) rotate(-4deg); }
+  100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+.eyebrow {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a56a2a;
+  margin: 0 0 0.75rem 0;
+}
+
+.tag h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 600;
+  color: #533313;
+  margin: 0 0 1rem 0;
+  line-height: 1.25;
+}
+
+.subtitle {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #534532;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 34ch;
+  margin: 0 auto 2.25rem auto;
+}
+
+.button {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fcf9f2;
+  background-color: #8c5a1f;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 2.5rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.button:hover {
+  background-color: #a56a2a;
+}
+
+.button:focus-visible {
+  outline: 3px solid #a56a2a;
+  outline-offset: 3px;
+}
+
+.pressed {
+  transform: scale(0.96);
+}
+
+.note {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: #a3927b;
+  margin: 1.25rem 0 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tag:hover .ring {
+    animation: none;
+  }
+  .button {
+    transition: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .cta {
+    padding: 4rem 1.25rem;
+  }
+  .tag {
+    padding: 3rem 1.5rem 2.5rem;
+  }
+}
