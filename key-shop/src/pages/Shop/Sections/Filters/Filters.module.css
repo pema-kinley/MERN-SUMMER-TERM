@@ -1,0 +1,65 @@
+/* Sections/Filters/Filters.module.css */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2.5rem;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b5a44;
+  background-color: transparent;
+  border: 1px solid #e3d6ba;
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.pill:hover {
+  background-color: #fcf6ec;
+}
+
+.active {
+  background-color: #8c5a1f;
+  border-color: #8c5a1f;
+  color: #fcf9f2;
+}
+
+.searchInput {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e3d6ba;
+  min-width: 220px;
+  color: #2a2118;
+}
+
+.searchInput:focus-visible {
+  outline: 2px solid #b9873f;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .searchInput {
+    width: 100%;
+  }
+}
